@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TasklyAugust</string>
+    <string name="title_tag">Taskly </string>
+    <string name="greeting">Welcome, \n Let\'s organize your day!</string>
+    <string name="newU">New User</string>
+    <string name="oldU">Return User</string>
 </resources>
