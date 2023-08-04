@@ -82,6 +82,10 @@ https://www.pexels.com/video/person-writing-notes-6781562/
 ###### icons
 https://feathericons.com/
 
+### Things I would have done differently
+* Use Canva to make prettier mock-up and been more creative w/ background of app
+
+
 
 
 
