@@ -8,14 +8,14 @@ import android.os.Bundle;
 
 import android.widget.VideoView;
 
-public class MainActivity extends AppCompatActivity {
+public class LandingPage extends AppCompatActivity {
 
     private VideoView tasklyVideo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_landing_page);
 
         // work w/ background video
         tasklyVideo = findViewById(R.id.backgroundVid);

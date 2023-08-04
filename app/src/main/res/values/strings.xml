@@ -4,4 +4,6 @@
     <string name="greeting">Welcome, \n Let\'s organize your day!</string>
     <string name="newU">New User</string>
     <string name="oldU">Return User</string>
+
+    <string name="join_greeting">Join Us</string>
 </resources>
