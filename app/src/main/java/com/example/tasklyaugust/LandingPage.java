@@ -2,10 +2,13 @@ package com.example.tasklyaugust;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.VideoView;
 
 public class LandingPage extends AppCompatActivity {
@@ -28,6 +31,25 @@ public class LandingPage extends AppCompatActivity {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
                 mediaPlayer.setLooping(true);
+            }
+        });
+
+        Button newUserBtn = (Button) findViewById(R.id.newUserBtn);
+        newUserBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(LandingPage.this, NewUser.class);
+                LandingPage.this.startActivity(myIntent);
+            }
+        });
+
+        // Open ReturningUser activity using btn
+        Button returnUserBtn = (Button) findViewById(R.id.returnUserBtn);
+        returnUserBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(LandingPage.this, ReturnUser.class);
+                LandingPage.this.startActivity(myIntent);
             }
         });
 

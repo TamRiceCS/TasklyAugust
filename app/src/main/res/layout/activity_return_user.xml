@@ -4,28 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yankees_blue"
-    tools:context=".NewUser">
+    android:background="@color/blue_yonder"
+    app:passwordToggleEnabled="true"
+    tools:context=".ReturnUser">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/join_greeting"
+        android:gravity="center"
+        android:text="Welcome\n Back"
         android:textColor="#FAFAFA"
         android:textSize="30sp"
         app:fontFamily="@font/poppins_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.026" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/returnUserLayout"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/blue_yonder_round"
+        android:background="@drawable/blue_yankees_squared"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,131 +36,73 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59">
+        app:layout_constraintVertical_bias="0.627">
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="30sp" />
 
         <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/user" />
-
-            <Space
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/editTextText"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_weight="1"
-                android:autofillHints="Name"
-                android:background="@drawable/eggshell_round"
-                android:ems="10"
-                android:hint="JaneDoe"
-                android:textColorHint="#C4C2C2"
-                android:inputType="text"
-                android:textColor="#6F6F6F"
-                android:textSize="15sp"
-                app:fontFamily="@font/poppins_medium" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="250sp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="In app name: 6-20 characters only"
-            android:textColor="#FAFAFA"
-            android:textSize="12sp"
-            app:fontFamily="@font/poppins_light" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="20sp"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/returnMailIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/mail" />
 
             <Space
-                android:layout_width="30dp"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress3"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:id="@+id/returnEmailForm"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:autofillHints="emailAddress"
+                android:autofillHints="Email"
+                android:textColorHint="#C4C2C2"
                 android:background="@drawable/eggshell_round"
                 android:ems="10"
                 android:hint="Email"
-                android:textColorHint="#C4C2C2"
                 android:inputType="textEmailAddress"
                 android:textColor="#6F6F6F"
                 android:textSize="15sp"
                 app:fontFamily="@font/poppins_medium" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="250sp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="your.email@somewhere.com"
-            android:textColor="#FAFAFA"
-            android:textSize="12sp"
-            app:fontFamily="@font/poppins_light" />
-
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20sp" />
+            android:layout_height="30sp" />
 
         <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/returnLockIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/lock" />
 
             <Space
-                android:layout_width="30dp"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:gravity="center_vertical"
+                android:id="@+id/returnPasswordForm"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:autofillHints="Password, 6-20 characters including 1 number"
+                android:autofillHints="Name"
                 android:background="@drawable/eggshell_round"
                 android:ems="10"
                 android:hint="Password"
@@ -165,34 +110,34 @@
                 android:inputType="textPassword"
                 android:textColor="#6F6F6F"
                 android:textSize="15sp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:drawableRight="@drawable/eye_off"
+                android:drawablePadding="5dp"
                 app:fontFamily="@font/poppins_medium" />
-        </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="250sp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="6-20 characters, at least one number"
-            android:textColor="#FAFAFA"
-            android:textSize="12sp"
-            app:fontFamily="@font/poppins_light" />
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="30sp" />
+            android:layout_height="45sp" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="250sp"
+            android:id="@+id/register"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000000"
-            android:text="Create Account"
-            android:textColor="#FAFAFA"
+            android:backgroundTint="@color/white"
+            android:text="Welcome Home"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:fontFamily="@font/poppins_medium"/>
 
+
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/returnOr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -202,34 +147,54 @@
             app:fontFamily="@font/poppins_black" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="250sp"
+            android:id="@+id/googleRegister"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
             android:drawableLeft="@drawable/google"
-            android:text="Sign-Up With Google"
+            android:text="Login With Google"
             android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:fontFamily="@font/poppins_medium"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="45sp" />
+
+
+        <Button
+            android:id="@+id/returnReccover"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E68374"
+            android:text="Recover Account"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:fontFamily="@font/poppins_medium"/>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="30sp" />
-
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already registered? Sign in!"
+        android:text="Not Registered? Join us!"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:fontFamily="@font/poppins_medium"
+        app:fontFamily="@font/poppins_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.964" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
