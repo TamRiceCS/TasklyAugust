@@ -6,4 +6,12 @@
     <string name="oldU">Return User</string>
 
     <string name="join_greeting">Join Us</string>
+    <string name="generic_name">Jane Doe</string>
+    <string name="name_instr">In app name: 6-20 characters only</string>
+    <string name="generic_email">Email</string>
+    <string name="email_instr">your.email@somewhere.com</string>
+
+
+    <string name="user_icon">User Icon</string>
+    <string name="mail_icon">Mail Icon</string>
 </resources>

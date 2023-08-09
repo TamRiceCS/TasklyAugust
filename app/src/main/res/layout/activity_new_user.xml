@@ -28,16 +28,14 @@
         android:background="@drawable/blue_yonder_round"
         android:gravity="center"
         android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.59">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30sp" />
 
         <LinearLayout
             android:layout_width="250dp"
@@ -49,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="@string/user_icon"
                 app:srcCompat="@drawable/user" />
 
             <Space
@@ -64,7 +63,7 @@
                 android:autofillHints="Name"
                 android:background="@drawable/eggshell_round"
                 android:ems="10"
-                android:hint="JaneDoe"
+                android:hint="@string/generic_name"
                 android:textColorHint="#C4C2C2"
                 android:inputType="text"
                 android:textColor="#6F6F6F"
@@ -78,15 +77,11 @@
             android:layout_width="250sp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="In app name: 6-20 characters only"
+            android:text="@string/name_instr"
             android:textColor="#FAFAFA"
             android:textSize="12sp"
+            android:paddingBottom="10dp"
             app:fontFamily="@font/poppins_light" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="20sp"
-            android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="250dp"
@@ -98,6 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="@string/mail_icon"
                 app:srcCompat="@drawable/mail" />
 
             <Space
@@ -113,7 +109,7 @@
                 android:autofillHints="emailAddress"
                 android:background="@drawable/eggshell_round"
                 android:ems="10"
-                android:hint="Email"
+                android:hint="@string/generic_email"
                 android:textColorHint="#C4C2C2"
                 android:inputType="textEmailAddress"
                 android:textColor="#6F6F6F"
@@ -129,11 +125,8 @@
             android:text="your.email@somewhere.com"
             android:textColor="#FAFAFA"
             android:textSize="12sp"
+            android:paddingBottom="10dp"
             app:fontFamily="@font/poppins_light" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20sp" />
 
         <LinearLayout
             android:layout_width="250dp"
@@ -176,11 +169,8 @@
             android:text="6-20 characters, at least one number"
             android:textColor="#FAFAFA"
             android:textSize="12sp"
+            android:paddingBottom="10dp"
             app:fontFamily="@font/poppins_light" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30sp" />
 
         <Button
             android:id="@+id/button"
@@ -188,6 +178,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#000000"
             android:text="Create Account"
+            android:textSize="12sp"
             android:textColor="#FAFAFA"
             app:fontFamily="@font/poppins_medium"/>
 
@@ -208,6 +199,7 @@
             android:backgroundTint="#FFFFFF"
             android:drawableLeft="@drawable/google"
             android:text="Sign-Up With Google"
+            android:textSize="12sp"
             android:textColor="#000000"
             app:fontFamily="@font/poppins_medium"/>
 
