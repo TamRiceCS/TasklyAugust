@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yankees_blue"
+    android:background="@drawable/green"
     tools:context=".NewUser">
 
     <TextView
@@ -15,6 +15,7 @@
         android:textColor="#FAFAFA"
         android:textSize="30sp"
         app:fontFamily="@font/poppins_black"
+        android:background="@drawable/blue_yonder_round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +30,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:paddingTop="30dp"
-        android:paddingBottom="10dp"
+        android:paddingBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -64,7 +65,7 @@
                 android:background="@drawable/eggshell_round"
                 android:ems="10"
                 android:hint="@string/generic_name"
-                android:textColorHint="#C4C2C2"
+                android:textColorHint="@color/spanish_gray"
                 android:inputType="text"
                 android:textColor="#6F6F6F"
                 android:textSize="15sp"
@@ -74,7 +75,7 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="250sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/name_instr"
@@ -110,19 +111,18 @@
                 android:background="@drawable/eggshell_round"
                 android:ems="10"
                 android:hint="@string/generic_email"
-                android:textColorHint="#C4C2C2"
                 android:inputType="textEmailAddress"
-                android:textColor="#6F6F6F"
+                android:textColorHint="@color/spanish_gray"
                 android:textSize="15sp"
                 app:fontFamily="@font/poppins_medium" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="250sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="your.email@somewhere.com"
+            android:text="@string/email_instr"
             android:textColor="#FAFAFA"
             android:textSize="12sp"
             android:paddingBottom="10dp"
@@ -138,6 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="@string/lock_icon"
                 app:srcCompat="@drawable/lock" />
 
             <Space
@@ -153,8 +154,8 @@
                 android:autofillHints="Password, 6-20 characters including 1 number"
                 android:background="@drawable/eggshell_round"
                 android:ems="10"
-                android:hint="Password"
-                android:textColorHint="#C4C2C2"
+                android:hint="@string/generic_pass"
+                android:textColorHint="@color/spanish_gray"
                 android:inputType="textPassword"
                 android:textColor="#6F6F6F"
                 android:textSize="15sp"
@@ -163,12 +164,13 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="250sp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:text="6-20 characters, at least one number"
+            android:text="@string/pass_instr"
             android:textColor="#FAFAFA"
             android:textSize="12sp"
+            android:minHeight="20dp"
             android:paddingBottom="10dp"
             app:fontFamily="@font/poppins_light" />
 
@@ -177,7 +179,7 @@
             android:layout_width="250sp"
             android:layout_height="wrap_content"
             android:backgroundTint="#000000"
-            android:text="Create Account"
+            android:text="@string/create_acc"
             android:textSize="12sp"
             android:textColor="#FAFAFA"
             app:fontFamily="@font/poppins_medium"/>
@@ -187,7 +189,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="-OR-"
+            android:text="@string/or"
             android:textColor="#FAFAFA"
             android:textSize="20sp"
             app:fontFamily="@font/poppins_black" />
@@ -197,15 +199,11 @@
             android:layout_width="250sp"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
-            android:drawableLeft="@drawable/google"
-            android:text="Sign-Up With Google"
+            android:text="@string/create_google_acc"
             android:textSize="12sp"
             android:textColor="#000000"
+            android:drawableLeft="@drawable/google"
             app:fontFamily="@font/poppins_medium"/>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30sp" />
 
     </LinearLayout>
 
@@ -213,10 +211,11 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already registered? Sign in!"
+        android:text="@string/transfer_reg"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:fontFamily="@font/poppins_medium"
+        android:background="@drawable/blue_yonder_round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
