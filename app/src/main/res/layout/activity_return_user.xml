@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_yonder"
+    android:background="@drawable/return_green"
     app:passwordToggleEnabled="true"
     tools:context=".ReturnUser">
 
     <TextView
         android:id="@+id/welcome"
-        android:layout_width="wrap_content"
+        android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Welcome\n Back"
+        android:text="Welcome Back"
         android:textColor="#FAFAFA"
         android:textSize="30sp"
+        android:background="@drawable/blue_yankees_squared"
         app:fontFamily="@font/poppins_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627">
+        app:layout_constraintVertical_bias="0.545">
 
         <Space
             android:layout_width="match_parent"
@@ -65,12 +66,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autofillHints="Email"
-                android:textColorHint="#C4C2C2"
                 android:background="@drawable/eggshell_round"
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:textColor="#6F6F6F"
+                android:textColorHint="#C4C2C2"
                 android:textSize="15sp"
                 app:fontFamily="@font/poppins_medium" />
         </LinearLayout>
@@ -97,23 +98,23 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:gravity="center_vertical"
                 android:id="@+id/returnPasswordForm"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autofillHints="Name"
                 android:background="@drawable/eggshell_round"
-                android:ems="10"
-                android:hint="Password"
-                android:textColorHint="#C4C2C2"
-                android:inputType="textPassword"
-                android:textColor="#6F6F6F"
-                android:textSize="15sp"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
                 android:drawableRight="@drawable/eye_off"
                 android:drawablePadding="5dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#6F6F6F"
+                android:textColorHint="#C4C2C2"
+                android:textSize="15sp"
                 app:fontFamily="@font/poppins_medium" />
 
         </LinearLayout>
@@ -129,11 +130,11 @@
             android:backgroundTint="@color/white"
             android:text="Welcome Home"
             android:textColor="#000000"
+            app:fontFamily="@font/poppins_medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:fontFamily="@font/poppins_medium"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
@@ -154,11 +155,11 @@
             android:drawableLeft="@drawable/google"
             android:text="Login With Google"
             android:textColor="#000000"
+            app:fontFamily="@font/poppins_medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:fontFamily="@font/poppins_medium"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Space
             android:layout_width="match_parent"
@@ -172,11 +173,11 @@
             android:backgroundTint="#E68374"
             android:text="Recover Account"
             android:textColor="#FFFFFF"
+            app:fontFamily="@font/poppins_medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:fontFamily="@font/poppins_medium"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Space
             android:layout_width="match_parent"
@@ -187,14 +188,15 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/blue_yankees_squared"
         android:text="Not Registered? Join us!"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:fontFamily="@font/poppins_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964" />
+        app:layout_constraintVertical_bias="0.976" />
 </androidx.constraintlayout.widget.ConstraintLayout>

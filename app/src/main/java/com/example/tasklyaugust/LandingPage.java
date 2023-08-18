@@ -20,7 +20,7 @@ public class LandingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
 
-        // work w/ background video
+        // grab video from raw file and grab container it will go in
         tasklyVideo = findViewById(R.id.backgroundVid);
         Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.taskly_landing);
         tasklyVideo.setVideoURI(uri);
@@ -43,7 +43,7 @@ public class LandingPage extends AppCompatActivity {
             }
         });
 
-        // Open ReturningUser activity using btn
+        // open ReturningUser activity using btn
         Button returnUserBtn = (Button) findViewById(R.id.returnUserBtn);
         returnUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
