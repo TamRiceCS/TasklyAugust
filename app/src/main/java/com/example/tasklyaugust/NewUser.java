@@ -54,6 +54,7 @@ public class NewUser extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(NewUser.this, MainPage.class);
                 NewUser.this.startActivity(myIntent);
+                finish();
             }
         });
     }

@@ -2,6 +2,7 @@ package com.example.tasklyaugust;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -26,16 +27,18 @@ public class MainPage extends AppCompatActivity {
                 Toast.makeText(this, item.getItemId() + " 1st button",  Toast.LENGTH_SHORT).show();
             }
             else if(item.getItemId() == R.id.calendar) {
-                Toast.makeText(this, item.getItemId() + " 2nd button",  Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(MainPage.this, Calendar.class);
+                MainPage.this.startActivity(myIntent);
 
             }
             else if(item.getItemId() == R.id.profile) {
-                Toast.makeText(this, item.getItemId() + " 3rd button",  Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(MainPage.this, Weekly_Analysis.class);
+                MainPage.this.startActivity(myIntent);
 
             }
             else {
-                Toast.makeText(this, item.getItemId() + " 4th button",  Toast.LENGTH_SHORT).show();
-
+                Intent myIntent = new Intent(MainPage.this, Settings.class);
+                MainPage.this.startActivity(myIntent);
             }
             return true;
 

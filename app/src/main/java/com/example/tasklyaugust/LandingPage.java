@@ -40,6 +40,7 @@ public class LandingPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(LandingPage.this, NewUser.class);
                 LandingPage.this.startActivity(myIntent);
+                finish(); // landing page is done
             }
         });
 
@@ -50,6 +51,7 @@ public class LandingPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(LandingPage.this, ReturnUser.class);
                 LandingPage.this.startActivity(myIntent);
+                finish(); // landing page is done
             }
         });
 

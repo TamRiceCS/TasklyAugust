@@ -55,6 +55,7 @@ public class ReturnUser extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(ReturnUser.this, MainPage.class);
                 ReturnUser.this.startActivity(myIntent);
+                finish();
             }
         });
     }

@@ -94,6 +94,8 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:fontFamily="@font/poppins_black"
+                android:textColor="#FAFAFA"
                 android:text="TextView" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -105,6 +107,8 @@
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:fontFamily="@font/poppins_black"
+                android:textColor="#FAFAFA"
                 android:text="TextView" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -116,6 +120,8 @@
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:fontFamily="@font/poppins_black"
+                android:textColor="#FAFAFA"
                 android:text="TextView" />
 
             <androidx.recyclerview.widget.RecyclerView
