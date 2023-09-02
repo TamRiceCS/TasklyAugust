@@ -9,10 +9,13 @@ import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ReturnUser extends AppCompatActivity {
 
     private EditText password;
+    private ImageView eye;
     private int passwordToggle = 0;
     private Typeface remember;
 
@@ -23,8 +26,9 @@ public class ReturnUser extends AppCompatActivity {
 
         // code to toggle password hidden / unhidden
         password = (EditText) findViewById(R.id.returnPasswordForm);
+        eye = (ImageView) findViewById(R.id.imageView41);
 
-        password.setOnClickListener(new View.OnClickListener() {
+        eye.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(passwordToggle == 0) {
@@ -34,7 +38,7 @@ public class ReturnUser extends AppCompatActivity {
                     password.setSelection(password.length());
                     passwordToggle = 1;
                     password.setTypeface(remember);
-                    password.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.eye, 0);
+                    eye.setImageResource(R.drawable.eye_off);
                 }
                 else{
                     // setInputType changes font to generic, so we have to set it back
@@ -43,14 +47,15 @@ public class ReturnUser extends AppCompatActivity {
                     password.setSelection(password.length());
                     passwordToggle = 0;
                     password.setTypeface(remember);
-                    password.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.eye_off, 0);
+                    eye.setImageResource(R.drawable.eye);
                 }
             }
         });
 
         // transfer user to main screen
-        Button newUserBtn = (Button) findViewById(R.id.register);
-        newUserBtn.setOnClickListener(new View.OnClickListener() {
+        Button oldUserBtn = (Button) findViewById(R.id.register);
+        Button oldGoogleBtn = (Button) findViewById(R.id.googleRegister);
+        oldUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(ReturnUser.this, MainPage.class);
@@ -58,5 +63,26 @@ public class ReturnUser extends AppCompatActivity {
                 finish();
             }
         });
+
+        oldGoogleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(ReturnUser.this, MainPage.class);
+                ReturnUser.this.startActivity(myIntent);
+                finish();
+            }
+        });
+
+        TextView switch2SignUp = (TextView) findViewById(R.id.textView10);
+
+        switch2SignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(ReturnUser.this, NewUser.class);
+                ReturnUser.this.startActivity(myIntent);
+                finish();
+            }
+        });
+
     }
 }

@@ -39,26 +39,26 @@
         app:layout_constraintVertical_bias="0.59">
 
         <LinearLayout
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
                 android:layout_weight="1"
                 android:contentDescription="@string/user_icon"
                 app:srcCompat="@drawable/user" />
 
             <Space
-                android:layout_width="30dp"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <EditText
                 android:id="@+id/editTextText"
-                android:layout_width="wrap_content"
+                android:layout_width="250sp"
                 android:layout_height="50sp"
                 android:layout_weight="1"
                 android:autofillHints="Name"
@@ -85,26 +85,26 @@
             app:fontFamily="@font/poppins_light" />
 
         <LinearLayout
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
                 android:layout_weight="1"
                 android:contentDescription="@string/mail_icon"
                 app:srcCompat="@drawable/mail" />
 
             <Space
-                android:layout_width="30dp"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress3"
-                android:layout_width="wrap_content"
+                android:layout_width="250sp"
                 android:layout_height="50sp"
                 android:layout_weight="1"
                 android:autofillHints="emailAddress"
@@ -129,38 +129,54 @@
             app:fontFamily="@font/poppins_light" />
 
         <LinearLayout
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
                 android:layout_weight="1"
                 android:contentDescription="@string/lock_icon"
                 app:srcCompat="@drawable/lock" />
 
             <Space
-                android:layout_width="30dp"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <EditText
-                android:id="@+id/editTextTextPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
+            <LinearLayout
+                android:layout_width="250sp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:autofillHints="Password, 6-20 characters including 1 number"
-                android:background="@drawable/eggshell_round"
-                android:ems="10"
-                android:hint="@string/generic_pass"
-                android:textColorHint="@color/spanish_gray"
-                android:inputType="textPassword"
-                android:textColor="#6F6F6F"
-                android:textSize="15sp"
-                android:drawableRight="@drawable/eye_off"
-                app:fontFamily="@font/poppins_medium" />
+                android:orientation="horizontal"
+                android:background="@drawable/eggshell_password">
+
+                <EditText
+                    android:id="@+id/editTextTextPassword"
+                    android:layout_width="210sp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:autofillHints="Password, 6-20 characters including 1 number"
+                    android:background="@drawable/eggshell_round"
+                    android:ems="10"
+                    android:hint="@string/generic_pass"
+                    android:inputType="textPassword"
+                    android:textColor="#6F6F6F"
+                    android:textColorHint="@color/spanish_gray"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/poppins_medium" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="30sp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/eye" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <TextView

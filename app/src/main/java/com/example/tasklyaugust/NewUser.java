@@ -4,15 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class NewUser extends AppCompatActivity {
 
     private EditText password;
+
+    private ImageView eye;
     private int passwordToggle = 0;
     private Typeface remember;
 
@@ -23,7 +28,8 @@ public class NewUser extends AppCompatActivity {
 
         // code to toggle password hidden / unhidden
         password = (EditText) findViewById(R.id.editTextTextPassword);
-        password.setOnClickListener(new View.OnClickListener() {
+        eye = (ImageView) findViewById(R.id.imageView5);
+        eye.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(passwordToggle == 0) {
@@ -33,7 +39,7 @@ public class NewUser extends AppCompatActivity {
                     password.setSelection(password.length());
                     passwordToggle = 1;
                     password.setTypeface(remember);
-                    password.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.eye, 0);
+                    eye.setImageResource(R.drawable.eye_off);
                 }
                 else{
                     // setInputType changes font to generic, so we have to set it back
@@ -42,17 +48,38 @@ public class NewUser extends AppCompatActivity {
                     password.setSelection(password.length());
                     passwordToggle = 0;
                     password.setTypeface(remember);
-                    password.setCompoundDrawablesWithIntrinsicBounds( 0, 0, R.drawable.eye_off, 0);
+                    eye.setImageResource(R.drawable.eye);
                 }
             }
         });
 
         // transfer user to main screen
         Button newUserBtn = (Button) findViewById(R.id.button);
+        Button newGoogleBtn = (Button) findViewById(R.id.button2);
         newUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(NewUser.this, MainPage.class);
+                NewUser.this.startActivity(myIntent);
+                finish();
+            }
+        });
+
+        newGoogleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(NewUser.this, MainPage.class);
+                NewUser.this.startActivity(myIntent);
+                finish();
+            }
+        });
+
+        TextView switch2SignIn = (TextView) findViewById(R.id.textView7);
+
+        switch2SignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(NewUser.this, ReturnUser.class);
                 NewUser.this.startActivity(myIntent);
                 finish();
             }

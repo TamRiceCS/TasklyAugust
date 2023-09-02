@@ -50,20 +50,20 @@
 
             <ImageView
                 android:id="@+id/returnMailIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/mail" />
 
             <Space
-                android:layout_width="20dp"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <EditText
                 android:id="@+id/returnEmailForm"
                 android:layout_width="250dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50sp"
                 android:layout_weight="1"
                 android:autofillHints="Email"
                 android:background="@drawable/eggshell_round"
@@ -71,8 +71,8 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:textColor="#6F6F6F"
-                android:textColorHint="#C4C2C2"
                 android:textSize="15sp"
+                android:textColorHint="@color/spanish_gray"
                 app:fontFamily="@font/poppins_medium" />
         </LinearLayout>
 
@@ -87,35 +87,50 @@
 
             <ImageView
                 android:id="@+id/returnLockIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/lock" />
 
             <Space
-                android:layout_width="20dp"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <EditText
-                android:id="@+id/returnPasswordForm"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="250sp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:autofillHints="Name"
-                android:background="@drawable/eggshell_round"
-                android:drawableRight="@drawable/eye_off"
-                android:drawablePadding="5dp"
-                android:ems="10"
-                android:gravity="center_vertical"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:textColor="#6F6F6F"
-                android:textColorHint="#C4C2C2"
-                android:textSize="15sp"
-                app:fontFamily="@font/poppins_medium" />
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/eggshell_password">
+
+                <EditText
+                    android:id="@+id/returnPasswordForm"
+                    android:layout_width="200dp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:autofillHints="Name"
+                    android:background="@drawable/eggshell_round"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#6F6F6F"
+                    android:textColorHint="@color/spanish_gray"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/poppins_medium" />
+
+                <ImageView
+                    android:id="@+id/imageView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/eye" />
+            </LinearLayout>
 
         </LinearLayout>
 
