@@ -21,6 +21,11 @@ public class NewUser extends AppCompatActivity {
     private int passwordToggle = 0;
     private Typeface remember;
 
+    private Button newUserBtn;
+    private Button newGoogleBtn;
+
+    private TextView switch2SignIn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +59,7 @@ public class NewUser extends AppCompatActivity {
         });
 
         // transfer user to main screen
-        Button newUserBtn = (Button) findViewById(R.id.button);
+        newUserBtn = (Button) findViewById(R.id.button);
         Button newGoogleBtn = (Button) findViewById(R.id.button2);
         newUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +79,7 @@ public class NewUser extends AppCompatActivity {
             }
         });
 
-        TextView switch2SignIn = (TextView) findViewById(R.id.textView7);
+        switch2SignIn = (TextView) findViewById(R.id.textView7);
 
         switch2SignIn.setOnClickListener(new View.OnClickListener() {
             @Override

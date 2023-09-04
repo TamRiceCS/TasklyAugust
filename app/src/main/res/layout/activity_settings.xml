@@ -59,9 +59,63 @@
 
     <LinearLayout
         android:layout_width="350sp"
-        android:layout_height="500sp"
+        android:layout_height="410sp"
         android:background="@drawable/eggshell_transparent"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_anchor="@+id/constraintLayout2"
-        app:layout_anchorGravity="center"></LinearLayout>
+        app:layout_anchorGravity="center">
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:text="Change Email"
+            android:backgroundTint="@color/black"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:text="Change Password"
+            android:backgroundTint="@color/black"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:text="Sign-Out"
+            android:backgroundTint="@color/black" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:text="Delete Account"
+            android:backgroundTint="#a32323"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:backgroundTint="#a32323"
+            android:text="Clear Local Data" />
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

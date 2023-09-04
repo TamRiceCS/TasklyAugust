@@ -19,6 +19,9 @@ public class ReturnUser extends AppCompatActivity {
     private int passwordToggle = 0;
     private Typeface remember;
 
+    private Button oldUserBtn;
+    private Button oldGoogleBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,8 +56,8 @@ public class ReturnUser extends AppCompatActivity {
         });
 
         // transfer user to main screen
-        Button oldUserBtn = (Button) findViewById(R.id.register);
-        Button oldGoogleBtn = (Button) findViewById(R.id.googleRegister);
+        oldUserBtn = (Button) findViewById(R.id.register);
+        oldGoogleBtn = (Button) findViewById(R.id.googleRegister);
         oldUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

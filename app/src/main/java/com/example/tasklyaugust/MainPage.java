@@ -20,11 +20,13 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
 
         menuBar = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
+        menuBar.getMenu().getItem(0).setChecked(true);
+
 
         menuBar.setOnItemSelectedListener( item -> {
 
             if(item.getItemId() == R.id.home) {
-                Toast.makeText(this, item.getItemId() + " 1st button",  Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Already Here",  Toast.LENGTH_SHORT).show();
             }
             else if(item.getItemId() == R.id.calendar) {
                 Intent myIntent = new Intent(MainPage.this, Calendar.class);
@@ -43,5 +45,11 @@ public class MainPage extends AppCompatActivity {
             return true;
 
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        menuBar.getMenu().getItem(0).setChecked(true);
     }
 }
