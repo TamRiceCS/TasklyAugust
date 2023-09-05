@@ -13,28 +13,6 @@ Individuals often have a collection of tasks in a day that they must complete. U
 * Procrastinators
 * Our target audience is young adults (college age / early career) that are just starting to experience independence. 
 
-### Competitors
-##### Google Calendar
-* Can set tasks w/ dates + times 
-* Can set reminders
-* Website + App integration
-* Reschedule smooth for day but time requires more work
-##### Physical Planner
-* No reminders
-* Written and can be edited a limited amount of times 
-* Limited space
-* No digital integration
-##### To-Do List (App example)
-* No time of day delimiters (date only)
-* Categories of tasks
-* Can set reminders
-* Easy to reschedule tasks
-* Graphs on productivity
-
-### User Testing Statement
-
-Hello, and thank you for taking time out of your day to test the UI/UX design of a new app in development named Taskly, an app designed to help users organize tasks in their day. During this user testing session you will be provided with a series of tasks to complete to the best of your ability. Please keep in mind that this is NOT a test of your technological prowess, but rather a test of the design of the application presented to you today. Please feel free to talk through all steps you take to complete a task. Any and all criticism is welcome, critique will be understood to be about the app presented and not a reflection of technical capability of the development team. Any and all notes taken will be anonymized and are about the app performance. Thank you again for your willingness to partake in this study; if there are no objections, we shall begin.
-
 ### User Testing Tasks
 
 ##### Login
