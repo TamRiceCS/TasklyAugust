@@ -9,7 +9,7 @@
         android:title="Calendar"
         android:icon="@drawable/calendar" />
 
-    <item android:id="@+id/profile"
+    <item android:id="@+id/stats"
         android:title="Stats"
         android:icon="@drawable/pie_chart" />
 

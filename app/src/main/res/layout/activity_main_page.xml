@@ -90,39 +90,132 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fontFamily="@font/poppins_black"
-                android:textColor="#FAFAFA"
-                android:text="TextView" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Morning Tasks"
+                    android:textColor="#FAFAFA"
+                    app:fontFamily="@font/poppins_black" />
+
+                <Space
+                    android:layout_width="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/clock" />
+
+                <Space
+                    android:layout_width="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/edit" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="300sp"
+                android:layout_height="100sp"
+                android:background="@drawable/eggshell_round">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Afternoon Tasks"
+                    android:textColor="#FAFAFA"
+                    app:fontFamily="@font/poppins_black" />
+
+                <Space
+                    android:layout_width="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/clock" />
+
+                <Space
+                    android:layout_width="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/edit" />
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="300sp"
                 android:layout_height="100sp"
                 android:background="@drawable/eggshell_round"/>
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:fontFamily="@font/poppins_black"
-                android:textColor="#FAFAFA"
-                android:text="TextView" />
+                android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="300sp"
-                android:layout_height="100sp"
-                android:background="@drawable/eggshell_round"/>
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Evening Tasks"
+                    android:textColor="#FAFAFA"
+                    app:fontFamily="@font/poppins_black" />
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:fontFamily="@font/poppins_black"
-                android:textColor="#FAFAFA"
-                android:text="TextView" />
+                <Space
+                    android:layout_width="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/clock" />
+
+                <Space
+                    android:layout_width="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/edit" />
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="300sp"

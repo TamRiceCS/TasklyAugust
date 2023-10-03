@@ -29,7 +29,7 @@ public class Weekly_Analysis extends AppCompatActivity {
                 Weekly_Analysis.this.startActivity(myIntent);
                 finish();
             }
-            else if(item.getItemId() == R.id.profile) {
+            else if(item.getItemId() == R.id.stats) {
                 Toast.makeText(this, "Already Here",  Toast.LENGTH_SHORT).show();
 
             }

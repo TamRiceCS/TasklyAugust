@@ -31,7 +31,7 @@ public class Settings extends AppCompatActivity {
                 finish();
 
             }
-            else if(item.getItemId() == R.id.profile) {
+            else if(item.getItemId() == R.id.stats) {
                 Intent myIntent = new Intent(Settings.this, Weekly_Analysis.class);
                 Settings.this.startActivity(myIntent);
                 finish();
