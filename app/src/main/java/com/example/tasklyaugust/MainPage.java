@@ -1,6 +1,9 @@
 package com.example.tasklyaugust;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +23,13 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+
+import kotlinx.coroutines.scheduling.Task;
+
 public class MainPage extends AppCompatActivity {
+
+    private TaskAdapter adapter;
 
     private BottomNavigationView menuBar;
     private FloatingActionButton add;
@@ -34,6 +43,21 @@ public class MainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+
+        // data to populate the RecyclerView with
+        ArrayList<String> taskList = new ArrayList<>();
+        taskList.add("Brush Teeth");
+        taskList.add("Wash Face");
+        taskList.add("Morning Shower");
+        taskList.add("Get Dressed");
+        taskList.add("Feed Cat");
+
+        // set up the RecyclerView
+        RecyclerView recyclerView = findViewById(R.id.section1);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new TaskAdapter(this, taskList);
+        recyclerView.setAdapter(adapter);
+
 
         menuBar = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
         menuBar.getMenu().getItem(0).setChecked(true);
