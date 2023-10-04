@@ -8,12 +8,17 @@ android {
 
     defaultConfig {
         applicationId "com.example.tasklyaugust"
-        minSdk 24
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ''
+            }
+        }
     }
 
     buildTypes {
@@ -36,6 +41,9 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    // Material Design
+    // Material Design (Used for menus)
     implementation 'com.google.android.material:material:1.3.0-alpha03'
+    // (Used for google login)
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+
 }

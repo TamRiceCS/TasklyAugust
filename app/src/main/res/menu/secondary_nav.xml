@@ -17,8 +17,4 @@
         android:title="Settings"
         android:icon="@drawable/settings"/>
 
-    <item android:id="@+id/empty"
-        android:title=""
-        android:enabled="false"/>
-
 </menu>

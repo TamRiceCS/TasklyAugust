@@ -21,4 +21,10 @@
     <string name="user_icon">User Icon</string>
     <string name="mail_icon">Mail Icon</string>
     <string name="lock_icon">Lock Icon</string>
+
+    <string-array name="task_categories">
+        <item>Morning</item>
+        <item>Evening</item>
+        <item>Afternoon</item>
+    </string-array>
 </resources>
