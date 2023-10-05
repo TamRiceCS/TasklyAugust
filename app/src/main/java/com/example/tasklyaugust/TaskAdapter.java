@@ -8,7 +8,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
@@ -41,6 +43,20 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return mData.size();
+    }
+
+    public void removeItem(int position) {
+        mData.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(String item, int position) {
+        mData.add(position, item);
+        notifyItemInserted(position);
+    }
+
+    public List<String> getData() {
+        return mData;
     }
 
 
