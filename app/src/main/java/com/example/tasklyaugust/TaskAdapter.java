@@ -1,3 +1,4 @@
+
 package com.example.tasklyaugust;
 
 import android.content.Context;
@@ -63,6 +64,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     // convenience method for getting data at click position
     String getItem(int id) {
         return mData.get(id);
+    }
+
+    void setItems(List<String> updatedTasks) {
+        this.mData = updatedTasks;
     }
 
     // allows clicks events to be caught

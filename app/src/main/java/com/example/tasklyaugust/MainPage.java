@@ -11,10 +11,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
@@ -25,11 +23,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-import kotlinx.coroutines.scheduling.Task;
-
 public class MainPage extends AppCompatActivity {
 
-    private TaskAdapter adapter;
+    private TaskAdapter taskAdapter;
 
     private BottomNavigationView menuBar;
     private FloatingActionButton add;
@@ -37,6 +33,7 @@ public class MainPage extends AppCompatActivity {
     private boolean click = true;
 
     private String section = "";
+    private ArrayList<String> taskList = new ArrayList<>();
 
 
     @Override
@@ -45,7 +42,6 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
 
         // data to populate the RecyclerView with
-        ArrayList<String> taskList = new ArrayList<>();
         taskList.add("Brush Teeth");
         taskList.add("Wash Face");
         taskList.add("Morning Shower");
@@ -55,8 +51,8 @@ public class MainPage extends AppCompatActivity {
         // set up the RecyclerView
         RecyclerView recyclerView = findViewById(R.id.section1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new TaskAdapter(this, taskList);
-        recyclerView.setAdapter(adapter);
+        taskAdapter = new TaskAdapter(this, taskList);
+        recyclerView.setAdapter(taskAdapter);
 
 
         menuBar = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
@@ -133,6 +129,11 @@ public class MainPage extends AppCompatActivity {
                 popupWindow.dismiss();
                 section = timeODay.getSelectedItem().toString();
                 Toast.makeText(MainPage.this, section,  Toast.LENGTH_SHORT).show();
+                String item = "ADDED A NEW THING";
+                int insertIndex = 2;
+                taskList.add(insertIndex, item);
+                taskAdapter.setItems(taskList);
+                taskAdapter.notifyDataSetChanged();
             }
         });
 
