@@ -2,10 +2,13 @@ package com.example.tasklyaugust;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,6 +23,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -33,6 +37,8 @@ public class MainPage extends AppCompatActivity {
     private boolean click = true;
 
     private String section = "";
+    private RecyclerView recyclerView;
+    private CoordinatorLayout coordinatorLayout;
 
 
     @Override
@@ -48,11 +54,17 @@ public class MainPage extends AppCompatActivity {
         taskList.add("Get Dressed");
         taskList.add("Feed Cat");
 
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
+
+
         // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.section1);
+        recyclerView = findViewById(R.id.section1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new TaskAdapter(this, taskList);
         recyclerView.setAdapter(adapter);
+
+        enableSwipeToDeleteAndUndo();
+
 
 
         menuBar = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
@@ -110,7 +122,7 @@ public class MainPage extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        mAdapter.restoreItem(item, position);
+                        adapter.restoreItem(item, position);
                         recyclerView.scrollToPosition(position);
                     }
                 });
