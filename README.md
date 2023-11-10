@@ -1,4 +1,4 @@
-# TasklyAugust
+# TasklyAugust (End Goal: December)
 ### Problem Statement
 Individuals often have a collection of tasks in a day that they must complete. Unfortunately, these tasks can seem overwhelming to serial procrastinators and people who suffer from mental illness. Individuals who have formed bad habits also find it hard to complete tasks. From initial surveying, when people plan out tasks for a day they encounter the following problems:
 * Poor task time estimation (Severely under or overestimate the amount of time tasks will take)
