@@ -16,7 +16,6 @@ import android.widget.TextView;
 public class NewUser extends AppCompatActivity {
 
     private EditText password;
-
     private ImageView eye;
     private int passwordToggle = 0;
     private Typeface remember;
@@ -33,7 +32,7 @@ public class NewUser extends AppCompatActivity {
 
         // code to toggle password hidden / unhidden
         password = (EditText) findViewById(R.id.editTextTextPassword);
-        eye = (ImageView) findViewById(R.id.imageView5);
+        eye = (ImageView) findViewById(R.id.hiddenIcon);
         eye.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,8 +58,8 @@ public class NewUser extends AppCompatActivity {
         });
 
         // transfer user to main screen
-        newUserBtn = (Button) findViewById(R.id.button);
-        Button newGoogleBtn = (Button) findViewById(R.id.button2);
+        newUserBtn = (Button) findViewById(R.id.createBttn);
+        Button newGoogleBtn = (Button) findViewById(R.id.signUpBttn);
         newUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +78,7 @@ public class NewUser extends AppCompatActivity {
             }
         });
 
-        switch2SignIn = (TextView) findViewById(R.id.textView7);
+        switch2SignIn = (TextView) findViewById(R.id.switchSignIn);
 
         switch2SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
