@@ -178,6 +178,7 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/section2"
                 android:layout_width="300sp"
                 android:layout_height="115sp"
                 android:background="@drawable/eggshell_round"/>
@@ -221,6 +222,7 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/section3"
                 android:layout_width="300sp"
                 android:layout_height="115sp"
                 android:background="@drawable/eggshell_round"/>

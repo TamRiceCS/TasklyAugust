@@ -55,6 +55,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         notifyItemInserted(position);
     }
 
+    public void addItem(String item) {
+        mData.add(item);
+        notifyDataSetChanged();
+        //notifyItemInserted(mData.size()-1);
+    }
+
     public List<String> getData() {
         return mData;
     }
