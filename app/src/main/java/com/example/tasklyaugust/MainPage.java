@@ -16,20 +16,31 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class MainPage extends AppCompatActivity {
 
-    private TaskAdapter adapter;
+    private TaskAdapter adapterMorning;
+    private RecyclerView recyclerViewMorning;
+
+    private TaskAdapter adapterAfternoon;
+    private RecyclerView recyclerViewAfternoon;
+
+    private TaskAdapter adapterEvening;
+    private RecyclerView recyclerViewEvening;
 
     private BottomNavigationView menuBar;
     private FloatingActionButton add;
@@ -37,7 +48,7 @@ public class MainPage extends AppCompatActivity {
     private boolean click = true;
 
     private String section = "";
-    private RecyclerView recyclerView;
+    private String addTxt = "";
     private CoordinatorLayout coordinatorLayout;
 
 
@@ -47,26 +58,34 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
 
         // data to populate the RecyclerView with
-        ArrayList<String> taskList = new ArrayList<>();
-        taskList.add("Brush Teeth");
-        taskList.add("Wash Face");
-        taskList.add("Morning Shower");
-        taskList.add("Get Dressed");
-        taskList.add("Feed Cat");
+        ArrayList<String> taskListMorn = new ArrayList<>();
+        ArrayList<String> taskListAnoon = new ArrayList<>();
+        ArrayList<String> taskListEven = new ArrayList<>();
 
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
 
         // set up the RecyclerView
-        recyclerView = findViewById(R.id.section1);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new TaskAdapter(this, taskList);
-        recyclerView.setAdapter(adapter);
+        recyclerViewMorning = findViewById(R.id.section1);
+        recyclerViewMorning.setLayoutManager(new LinearLayoutManager(this));
+        adapterMorning = new TaskAdapter(this, taskListMorn);
+        recyclerViewMorning.setAdapter(adapterMorning);
+
+        recyclerViewAfternoon = findViewById(R.id.section2);
+        recyclerViewAfternoon.setLayoutManager(new LinearLayoutManager(this));
+        adapterAfternoon = new TaskAdapter(this, taskListAnoon);
+        recyclerViewAfternoon.setAdapter(adapterAfternoon);
+
+        recyclerViewEvening = findViewById(R.id.section3);
+        recyclerViewEvening.setLayoutManager(new LinearLayoutManager(this));
+        adapterEvening = new TaskAdapter(this, taskListEven);
+        recyclerViewEvening.setAdapter(adapterEvening);
 
         enableSwipeToDeleteAndUndo();
 
 
 
+        // menu bar navigation
         menuBar = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
         menuBar.getMenu().getItem(0).setChecked(true);
 
@@ -94,7 +113,7 @@ public class MainPage extends AppCompatActivity {
 
         });
 
-
+        // add button that is far right on nav bar
         add = (FloatingActionButton) findViewById(R.id.fab);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,36 +124,95 @@ public class MainPage extends AppCompatActivity {
     }
 
     private void enableSwipeToDeleteAndUndo() {
-        SwipeDelete swipeToDeleteCallback = new SwipeDelete(this) {
+        SwipeDelete swipeDeleteMorn = new SwipeDelete(this) {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
 
-
                 final int position = viewHolder.getAdapterPosition();
-                final String item = adapter.getData().get(position);
+                final String item = adapterMorning.getData().get(position);
 
-                adapter.removeItem(position);
+                adapterMorning.removeItem(position);
 
-
+                // upon swiping an icon away, we should give safety to restore it!
                 Snackbar snackbar = Snackbar
                         .make(coordinatorLayout, "Item was removed from the list.", Snackbar.LENGTH_LONG);
                 snackbar.setAction("UNDO", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
-                        adapter.restoreItem(item, position);
-                        recyclerView.scrollToPosition(position);
+                        adapterMorning.restoreItem(item, position);
+                        recyclerViewMorning.scrollToPosition(position);
                     }
                 });
 
-                snackbar.setActionTextColor(Color.YELLOW);
+                snackbar.setActionTextColor(Color.GREEN);
                 snackbar.show();
 
             }
         };
 
-        ItemTouchHelper itemTouchhelper = new ItemTouchHelper(swipeToDeleteCallback);
-        itemTouchhelper.attachToRecyclerView(recyclerView);
+        SwipeDelete swipeDeleteAnoon = new SwipeDelete(this) {
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+
+                final int position = viewHolder.getAdapterPosition();
+                final String item = adapterAfternoon.getData().get(position);
+
+                adapterAfternoon.removeItem(position);
+
+                // upon swiping an icon away, we should give safety to restore it!
+                Snackbar snackbar = Snackbar
+                        .make(coordinatorLayout, "Item was removed from the list.", Snackbar.LENGTH_LONG);
+                snackbar.setAction("UNDO", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        adapterAfternoon.restoreItem(item, position);
+                        recyclerViewAfternoon.scrollToPosition(position);
+                    }
+                });
+
+                snackbar.setActionTextColor(Color.GREEN);
+                snackbar.show();
+
+            }
+        };
+
+        SwipeDelete swipeDeleteEven = new SwipeDelete(this) {
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+
+                final int position = viewHolder.getAdapterPosition();
+                final String item = adapterEvening.getData().get(position);
+
+                adapterEvening.removeItem(position);
+
+                // upon swiping an icon away, we should give safety to restore it!
+                Snackbar snackbar = Snackbar
+                        .make(coordinatorLayout, "Item was removed from the list.", Snackbar.LENGTH_LONG);
+                snackbar.setAction("UNDO", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        adapterEvening.restoreItem(item, position);
+                        recyclerViewEvening.scrollToPosition(position);
+                    }
+                });
+
+                snackbar.setActionTextColor(Color.GREEN);
+                snackbar.show();
+
+            }
+        };
+
+        ItemTouchHelper helperMorn = new ItemTouchHelper(swipeDeleteMorn);
+        helperMorn.attachToRecyclerView(recyclerViewMorning);
+
+        ItemTouchHelper helperAnoon = new ItemTouchHelper(swipeDeleteAnoon);
+        helperAnoon.attachToRecyclerView(recyclerViewAfternoon);
+
+        ItemTouchHelper helperEven = new ItemTouchHelper(swipeDeleteEven);
+        helperEven.attachToRecyclerView(recyclerViewEvening);
     }
 
     public void onButtonShowPopupWindowClick(View view) {
@@ -147,25 +225,24 @@ public class MainPage extends AppCompatActivity {
         // create the popup window
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.MATCH_PARENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
-        PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+        PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 
         // show the popup window
-        // which view you pass in doesn't matter, it is only used for the window tolken
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
 
         Spinner timeODay = (Spinner) (popupView.findViewById(R.id.spinner));
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> dropDown = ArrayAdapter.createFromResource(this,
                 R.array.task_categories, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        timeODay.setAdapter(adapter);
+        dropDown.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        timeODay.setAdapter(dropDown);
 
 
 
         Button addTask = (Button) (popupView.findViewById(R.id.button8));
         Button cancelAdd = (Button) (popupView.findViewById(R.id.button9));
+        EditText taskDescr = (EditText) (popupView.findViewById(R.id.editTextText2));
 
 
         addTask.setOnClickListener(new View.OnClickListener() {
@@ -173,6 +250,20 @@ public class MainPage extends AppCompatActivity {
             public void onClick(View v) {
                 popupWindow.dismiss();
                 section = timeODay.getSelectedItem().toString();
+                addTxt = taskDescr.getText().toString();
+
+                if(section.equals("Morning")) {
+                    adapterMorning.addItem(addTxt);
+                }
+
+                else if(section.equals("Afternoon")) {
+                    adapterAfternoon.addItem(addTxt);
+                }
+
+                else if(section.equals("Evening")) {
+                    adapterEvening.addItem(addTxt);
+                }
+
                 Toast.makeText(MainPage.this, section,  Toast.LENGTH_SHORT).show();
             }
         });

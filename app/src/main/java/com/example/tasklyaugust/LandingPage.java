@@ -26,7 +26,8 @@ public class LandingPage extends AppCompatActivity {
         tasklyVideo.setVideoURI(uri);
         tasklyVideo.start();
 
-        // figure out how to make below, a lambda func to get rid of warning
+        // loop-video in the background
+        // TODO: figure out how to make below, a lambda func to get rid of warning
         tasklyVideo.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -34,6 +35,7 @@ public class LandingPage extends AppCompatActivity {
             }
         });
 
+        // set up button to move to new user set up
         Button newUserBtn = (Button) findViewById(R.id.newUserBtn);
         newUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +46,7 @@ public class LandingPage extends AppCompatActivity {
             }
         });
 
-        // open ReturningUser activity using btn
+        // set up button to move to returning user set up
         Button returnUserBtn = (Button) findViewById(R.id.returnUserBtn);
         returnUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override

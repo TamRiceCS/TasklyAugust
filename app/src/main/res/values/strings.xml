@@ -24,7 +24,7 @@
 
     <string-array name="task_categories">
         <item>Morning</item>
-        <item>Evening</item>
         <item>Afternoon</item>
+        <item>Evening</item>
     </string-array>
 </resources>

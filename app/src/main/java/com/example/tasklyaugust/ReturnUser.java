@@ -42,7 +42,7 @@ public class ReturnUser extends AppCompatActivity {
 
         // code to toggle password hidden / unhidden
         password = (EditText) findViewById(R.id.returnPasswordForm);
-        eye = (ImageView) findViewById(R.id.imageView41);
+        eye = (ImageView) findViewById(R.id.eyeIcon);
 
         eye.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +80,8 @@ public class ReturnUser extends AppCompatActivity {
             }
         });
 
+        // attempt to implement google sign in w/ gso
+        // TODO: finish gso for sign in
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
         oldGoogleBtn.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +92,9 @@ public class ReturnUser extends AppCompatActivity {
             }
         });
 
-        TextView switch2SignUp = (TextView) findViewById(R.id.textView10);
+
+        // toggle back to sign up page
+        TextView switch2SignUp = (TextView) findViewById(R.id.switchSignUp);
 
         switch2SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
