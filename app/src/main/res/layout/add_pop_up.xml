@@ -33,13 +33,13 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editTextText2"
+                    android:id="@+id/userTaskInput"
                     android:layout_width="match_parent"
-                    android:layout_height="50sp"
+                    android:layout_height="wrap_content"
                     android:autofillHints="Enter Task Name"
                     android:ems="10"
-                    android:inputType="text"
-                    android:text="Name" />
+                    android:hint="Name of Task..."
+                    android:inputType="text" />
 
                 <Spinner
                     android:id="@+id/spinner"
@@ -55,7 +55,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button8"
+                    android:id="@+id/addTask"
                     android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/black"
@@ -67,7 +67,7 @@
                     android:layout_weight="0" />
 
                 <Button
-                    android:id="@+id/button9"
+                    android:id="@+id/cancelTask"
                     android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:text="Cancel Task" />

@@ -43,7 +43,7 @@
 
         <LinearLayout
             android:layout_width="250dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:background="@drawable/blue_yonder_round"
             android:gravity="center"
             android:orientation="horizontal"
@@ -83,13 +83,17 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="450sp"
+            android:layout_height="500sp"
             android:orientation="vertical"
             android:background="@drawable/blue_yonder_round"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -139,6 +143,10 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -181,7 +189,13 @@
                 android:id="@+id/section2"
                 android:layout_width="300sp"
                 android:layout_height="115sp"
-                android:background="@drawable/eggshell_round"/>
+                android:background="@drawable/eggshell_round">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

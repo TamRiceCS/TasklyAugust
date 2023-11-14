@@ -65,7 +65,7 @@ public class MainPage extends AppCompatActivity {
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
 
-        // set up the RecyclerView
+        // set up the RecyclerViews for each section
         recyclerViewMorning = findViewById(R.id.section1);
         recyclerViewMorning.setLayoutManager(new LinearLayoutManager(this));
         adapterMorning = new TaskAdapter(this, taskListMorn);
@@ -123,6 +123,7 @@ public class MainPage extends AppCompatActivity {
         });
     }
 
+    // TODO: Find a way to make the below function more modular. (i.e is there a way to get parent RecyclerView name)
     private void enableSwipeToDeleteAndUndo() {
         SwipeDelete swipeDeleteMorn = new SwipeDelete(this) {
             @Override
@@ -240,9 +241,9 @@ public class MainPage extends AppCompatActivity {
 
 
 
-        Button addTask = (Button) (popupView.findViewById(R.id.button8));
-        Button cancelAdd = (Button) (popupView.findViewById(R.id.button9));
-        EditText taskDescr = (EditText) (popupView.findViewById(R.id.editTextText2));
+        Button addTask = (Button) (popupView.findViewById(R.id.addTask));
+        Button cancelAdd = (Button) (popupView.findViewById(R.id.cancelTask));
+        EditText taskDescr = (EditText) (popupView.findViewById(R.id.userTaskInput));
 
 
         addTask.setOnClickListener(new View.OnClickListener() {
