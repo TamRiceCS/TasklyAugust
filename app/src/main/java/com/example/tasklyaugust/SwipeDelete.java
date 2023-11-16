@@ -42,11 +42,13 @@ abstract public class SwipeDelete extends ItemTouchHelper.Callback {
 
 
     @Override
+    // This shows how we are allowed to move items: we can drag up and down while also swiping start-end and end-start
     public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
-        return makeMovementFlags(0, ItemTouchHelper.LEFT);
+        return makeMovementFlags(ItemTouchHelper.UP | ItemTouchHelper.DOWN, ItemTouchHelper.START | ItemTouchHelper.END);
     }
 
     @Override
+    // Here is where we implement onMove, this will be tricky
     public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder viewHolder1) {
         return false;
     }
@@ -95,3 +97,5 @@ abstract public class SwipeDelete extends ItemTouchHelper.Callback {
         return 0.7f;
     }
 }
+
+// https://medium.com/@kitek/recyclerview-swipe-to-delete-easier-than-you-thought-cff67ff5e5f6
