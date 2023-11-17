@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="spanish_gray">#112248</color>
+
     <color name="white">#FFFFFFFF</color>
+
     <color name="blue_yonder">#4577A7</color>
     <color name="yankees_blue">#112248</color>
-    <color name="spanish_gray">#112248</color>
+
+    <color name="middle_red">#E68374</color>
+
 </resources>

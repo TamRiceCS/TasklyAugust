@@ -1,21 +1,28 @@
 <resources>
     <string name="app_name">TasklyAugust</string>
-    <string name="title_tag">Taskly </string>
-    <string name="greeting">Welcome, \n Let\'s organize your day!</string>
+    <string name="title_tag">Taskly</string>
     <string name="newU">New User</string>
     <string name="oldU">Return User</string>
 
     <string name="join_greeting">Join Us</string>
-    <string name="generic_name">Jane Doe</string>
-    <string name="name_instr">In app name: 6-20 characters only</string>
+    <string name="generic_name">Username</string>
     <string name="generic_email">Email</string>
-    <string name="email_instr">your.email@somewhere.com</string>
     <string name="generic_pass">Password</string>
-    <string name="pass_instr">6-20 characters, at least one number</string>
+
     <string name="create_acc">Create Account</string>
     <string name="or">-OR-</string>
     <string name="create_google_acc">Signup with Google</string>
     <string name="transfer_reg">Already registered? Sign in!</string>
+
+    <string name="welcome_greeting">Welcome  Back</string>
+    <string name="login">Welcome Home</string>
+    <string name="login_google_acc">Login with Google</string>
+    <string name="recover">Recover Account</string>
+    <string name="transfer_sign">Not Registered? Join us!"</string>
+
+
+
+
 
 
     <string name="user_icon">User Icon</string>

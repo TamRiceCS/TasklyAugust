@@ -60,21 +60,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <TextView
-            android:id="@+id/appGreeting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/greeting"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:fontFamily="@font/poppins_medium"
-            android:background="@drawable/black_round"
-            />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20sp" />
-
         <Button
             android:id="@+id/newUserBtn"
             android:layout_width="200dp"

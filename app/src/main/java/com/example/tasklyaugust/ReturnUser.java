@@ -82,16 +82,6 @@ public class ReturnUser extends AppCompatActivity {
 
         // attempt to implement google sign in w/ gso
         // TODO: finish gso for sign in
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gsc = GoogleSignIn.getClient(this, gso);
-        oldGoogleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent SignInIntent = gsc.getSignInIntent();
-                startActivityForResult(SignInIntent, 1000);
-            }
-        });
-
 
         // toggle back to sign up page
         TextView switch2SignUp = (TextView) findViewById(R.id.switchSignUp);
@@ -105,28 +95,5 @@ public class ReturnUser extends AppCompatActivity {
             }
         });
 
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if(requestCode == 1000){
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-
-            try {
-                task.getResult(ApiException.class);
-                nextActivity();
-            } catch (ApiException e) {
-                Toast.makeText(this, "Something Went Wrong...", Toast.LENGTH_SHORT);
-            }
-        }
-    }
-
-    void nextActivity (){
-        finish();
-        Intent myIntent = new Intent(ReturnUser.this, MainPage.class);
-        ReturnUser.this.startActivity(myIntent);
     }
 }

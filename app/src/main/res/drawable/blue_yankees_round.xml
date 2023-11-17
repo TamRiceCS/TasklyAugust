@@ -5,10 +5,4 @@
     <!-- The radius makes the corners rounded -->
     <corners android:radius="10dp">
     </corners>
-    <!-- Padding -->
-    <padding
-        android:left="10dp"
-        android:top="10dp"
-        android:right="10dp"
-        android:bottom="10dp" />
 </shape>
